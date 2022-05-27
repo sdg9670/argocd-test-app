@@ -33,7 +33,7 @@ spec:
         app: argocd-test-app-dev
     spec:
       containers:
-      - image: argocd-test-app-dev:67
+      - image: argocd-test-app-dev:68
         name: argocd-test-app
         ports:
         - containerPort: 80
