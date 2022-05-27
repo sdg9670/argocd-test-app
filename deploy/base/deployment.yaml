@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-test-app-deployment
+spec:
+  startegy:
+    type: RollingUpdate
+  replicas: 3
+  selector:
+    matchLabels:
+      app: argocd-test-app
+  template:
+    spec:
+      containers:
+      - name: argocd-test-app
+        image: argocd-test-app
+        ports:
+        - containerPort: 80
